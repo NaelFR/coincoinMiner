@@ -12,9 +12,14 @@ using namespace std;
 class Miner {
     private:
         string minC;
+        static Miner* instance;
+
+        /* Private constructor to prevent instancing. */
+        explicit Miner(string stringC);
     public:
-        Miner(string minC);
+        static Miner* getInstance(string c);
         string generateMinC(int nb);
+        void startMining(string tri);
 
 };
 
