@@ -5,9 +5,29 @@
 #ifndef COINCOIN_MINER_TOKEN_H
 #define COINCOIN_MINER_TOKEN_H
 
+#include <string>
+
+using namespace std;
 
 class Token {
-public:
+
+    static const char alphanum[] =
+                "0123456789"
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                "abcdefghijklmnopqrstuvwxyz";
+    int stringLength = sizeof(alphanum) - 1;
+
+    private:
+        string triOwn;
+        stringstream ssToken;
+        string sToken;
+    public:
+        string generateToken();
+        char genRandomChar();
+        string getTimestamp();
+        string randomString(int length);
+
+
 
 };
 
