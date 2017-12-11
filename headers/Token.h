@@ -20,8 +20,8 @@ class Token {
     private:
         string triOwn;
         stringstream ssToken;
-        string sToken;
     public:
+        Token(string trigramme);
         string generateToken();
         char genRandomChar();
         string getTimestamp();

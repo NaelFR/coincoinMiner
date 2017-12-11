@@ -5,6 +5,12 @@
 #include <ctime>
 #include "../headers/Token.h"
 
+
+Token::Token(string trigramme)
+{
+    this->triOwn = trigramme;
+
+}
 char Token::genRandomChar()
 {
     return alphanum[rand() % stringLength];
@@ -35,6 +41,7 @@ string Token::getTimestamp()
 string Token::generateToken()
 {
     ssToken.str("");
-    ss2 << randomString(32) << "-NAB-CC1.0-" << getTimestamp() << "-0f0f0f";
-    ts2 = ss2.str();
+    ssToken << randomString(32) << "-" << this->triOwn << "-CC1.0-" << getTimestamp() << "-0f0f0f";
+
+    return ssToken.str();
 }
