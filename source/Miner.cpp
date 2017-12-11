@@ -4,11 +4,12 @@
 #include "../headers/Miner.h"
 #include "../headers/Coin.h"
 #include "../headers/Token.h"
+#include <stdlib.h>
 
 Miner* Miner::instance = 0;
 
 Miner::Miner(string minC) {
-    int c = atoi(minC);
+    int c = stoi(minC);
 
     this->minC = generateMinC(c);
 }

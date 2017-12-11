@@ -20,6 +20,6 @@ int main(int argc, char *argv[]) {
     Miner* miner = Miner::getInstance(argv[4]);
 
     miner->startMining(argv[2]);
-    
+
     return 0;
 }

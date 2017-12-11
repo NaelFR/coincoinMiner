@@ -6,12 +6,13 @@
 #define COINCOIN_MINER_TOKEN_H
 
 #include <string>
+#include <sstream>
 
 using namespace std;
 
 class Token {
 
-    static const char alphanum[] =
+    static constexpr char alphanum[] =
                 "0123456789"
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 "abcdefghijklmnopqrstuvwxyz";
