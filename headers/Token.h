@@ -12,11 +12,7 @@ using namespace std;
 
 class Token {
 
-    static constexpr char alphanum[] =
-                "0123456789"
-                "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                "abcdefghijklmnopqrstuvwxyz";
-    int stringLength = sizeof(alphanum) - 1;
+
 
     private:
         string triOwn;

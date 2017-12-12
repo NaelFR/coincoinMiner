@@ -4,17 +4,15 @@
 #include "../headers/Miner.h"
 #include "../headers/Coin.h"
 #include "../headers/Token.h"
-#include <stdlib.h>
 
 Miner* Miner::instance = 0;
 
-Miner::Miner(string minC) {
-    int c = stoi(minC);
+Miner::Miner(int minC) {
 
-    this->minC = generateMinC(c);
+    this->minC = generateMinC(minC);
 }
 
-Miner* Miner::getInstance(string c)
+Miner* Miner::getInstance(int c)
 {
     if (instance == 0)
     {

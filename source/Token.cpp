@@ -6,6 +6,12 @@
 #include "../headers/Token.h"
 
 
+static constexpr char alphanum[] =
+        "0123456789"
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                "abcdefghijklmnopqrstuvwxyz";
+int stringLength = sizeof(alphanum) - 1;
+
 Token::Token(string trigramme)
 {
     this->triOwn = trigramme;
@@ -21,7 +27,7 @@ string Token::randomString(int length)
     std::string Str;
     for(unsigned int i = 0; i < length; ++i)
     {
-        Str += genRandomChar();
+        Str += this->genRandomChar();
 
     }
 

@@ -15,9 +15,9 @@ class Miner {
         static Miner* instance;
 
         /* Private constructor to prevent instancing. */
-        explicit Miner(string stringC);
+        explicit Miner(int minC);
     public:
-        static Miner* getInstance(string c);
+        static Miner* getInstance(int c);
         string generateMinC(int nb);
         void startMining(string tri);
 
